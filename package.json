@@ -19,10 +19,15 @@
   },
   "homepage": "https://github.com/dev-tom-0108/Staking-Backend#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "web3": "^4.0.3"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
     "@types/node": "^20.4.5",
     "ts-node": "^10.9.1",

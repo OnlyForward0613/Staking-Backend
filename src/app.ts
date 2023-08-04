@@ -39,7 +39,7 @@ app.post("/withdraw", async (req, res) => {
     let stakedIds = tokenIds.ids as number[];
     let check = release === "1" ? true: false;
     console.log(check)
-  
+
     // tokenIds = {
     //   'ids': [1, 2, 3, 4, 5]
     // }

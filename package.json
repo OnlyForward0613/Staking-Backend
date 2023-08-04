@@ -22,6 +22,7 @@
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
+    "ethers": "^6.7.0",
     "express": "^4.18.2",
     "http": "^0.0.1-security",
     "web3": "^4.0.3"

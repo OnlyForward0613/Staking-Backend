@@ -39,11 +39,7 @@ app.post("/withdraw", async (req, res) => {
     let stakedIds = tokenIds.ids as number[];
     let check = release === "1" ? true: false;
     console.log(check)
-
-    // tokenIds = {
-    //   'ids': [1, 2, 3, 4, 5]
-    // }
-
+  
     console.log("address: ", address)
     console.log("stakedIds: ", stakedIds)
     let bigIntIds=[];
@@ -53,18 +49,14 @@ app.post("/withdraw", async (req, res) => {
 
     // Prepare the transaction data
     contract.withdrawReward(address, stakedIds, check)
-    .then((tx) => {
-      console.log('Transaction sent:', tx.hash);
-      res.send(JSON.stringify(tx.hash ? tx.hash : -200));
-      return tx.wait(); // Wait for the transaction to be mined
-    })
-    .then((receipt) => {
-      res.send(JSON.stringify(200));
-      console.log('Transaction receipt:', receipt);
-    })
-    .catch((error) => {
-      res.status(409).send(error);
-      console.error('Error sending transaction:', error);
+      .then((tx) => {
+        console.log('Transaction sent:', tx.hash);
+        res.send(JSON.stringify(tx.hash ? tx.hash : -200));
+        return tx.wait(); // Wait for the transaction to be mined
+      })
+      .catch((error) => {
+        res.status(409).send(error);
+        console.error('Error sending transaction:', error);
     });
   } catch (error) {
     console.log(">>>error", error);

@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "npx ts-node-dev src/app.ts",
-    "start": "nodemon dist/app.js",
-    "build": "tsc"
+    "start": "node dist/app.js",
+    "build": "tsc --outDir dist"
   },
   "repository": {
     "type": "git",
